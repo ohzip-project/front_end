@@ -1,0 +1,26 @@
+/* src/components/Signup/EmailVerificationButton/EmailVerificationButton.module.css */
+.container {
+    margin-top: 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #00c3a3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .infoMessage {
+    margin-top: 10px;
+    color: #00c3a3;
+    font-size: 0.9em;
+  }
+  
