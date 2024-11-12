@@ -1,36 +1,45 @@
 // src/pages/SignupPage.js
-import React from 'react';
-import Logo from '../components/common/Logo';
-import SnsLoginButtons from '../components/Signup/SnsLoginButtons';
-import EmailInput from '../components/Signup/EmailInput';
-import EmailVerificationButton from '../components/Signup/EmailVerificationButton';
-import PasswordInput from '../components/Signup/PasswordInput';
-import PasswordConfirmInput from '../components/Signup/PasswordConfirmInput';
-import NicknameInput from '../components/Signup/NicknameInput';
-import TermsAgreement from '../components/Signup/TermsAgreement';
-import SignupButton from '../components/Signup/SignupButton';
+import React from "react";
+import EmailInput from "../components/Signup/EmailInput/EmailInput.js";
+import EmailVerificationButtons from "../components/Signup/EmailVerificationButtons/EmailVerificationButtons.js";
+import PasswordInput from "../components/Signup/PasswordInput/PasswordInput.js";
+import PasswordConfirmInput from "../components/Signup/PasswordConfirmInput/PasswordConfirmInput.js";
+import NicknameInput from "../components/Signup/NicknameInput/NicknameInput.js";
+import TermsAgreement from "../components/Signup/TermsAgreement/TermsAgreement.js";
+import TermsCheckbox from "../components/Signup/TermsCheckbox/TermsCheckbox.js";
+import SignupButton from "../components/Signup/SignupButton/SignupButton.js";
+import SocialLoginButtons from "../components/Signup/SocialLoginButtons/SocialLoginButtons.js";
+// import SignupForm from "../components/Signup/SignupForm/SignupForm.js";
 
 function SignupPage() {
   return (
-    <div className="signup-page">
+    <div className="SignUp-page">
       <h1>회원가입</h1>
       <p>SNS 계정으로 간편하게 회원가입</p>
-      <SnsLoginButtons />
+      <SocialLoginButtons />
 
-      <div className="email-section">
+      <div className="Email-section">
         <EmailInput />
-        <EmailVerificationButton />
+        <EmailVerificationButtons />
       </div>
 
-      <PasswordInput />
-      <PasswordConfirmInput />
+      <div className="Password-section">
+        <PasswordInput />
+        <PasswordConfirmInput />
+      </div>
+
       <NicknameInput />
-      
-      <TermsAgreement />
+
+      <div className="TermsAgreement-section">
+        <TermsAgreement />
+        <TermsCheckbox />
+      </div>
 
       <SignupButton />
 
-      <p>이미 아이디가 있으신가요? <a href="/login">로그인</a></p>
+      <p>
+        이미 아이디가 있으신가요? <a href="/login">로그인</a>
+      </p>
     </div>
   );
 }

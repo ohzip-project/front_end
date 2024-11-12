@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function EmailInput() {
-  return (
-    <input type="email" placeholder="이메일" />
-  );
+  return <input type="email" placeholder="이메일" />;
 }
 
 export default EmailInput;

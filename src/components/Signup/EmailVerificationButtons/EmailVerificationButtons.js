@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-function EmailVerificationButton() {
+function EmailVerificationButtons() {
   return <button>이메일 인증하기</button>;
 }
 
-export default EmailVerificationButton;
+export default EmailVerificationButtons;

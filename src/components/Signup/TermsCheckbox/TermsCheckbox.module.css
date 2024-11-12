@@ -1,0 +1,52 @@
+/* 체크박스 전체 컨테이너 */
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px; /* 항목 간에 12px 간격 */
+}
+
+/* 기본 체크박스를 숨김 */
+.checkboxInput {
+  display: none;
+}
+
+/* 체크박스 라벨 */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* 커스텀 체크박스 스타일 */
+.customCheckbox {
+  width: 15px;
+  height: 15px;
+  background-color: #f1f1f1; /* 기본 배경색 */
+  border: 0.5px solid #dfdfdf;
+  border-radius: 3px; /* 모서리를 둥글게 */
+  margin-right: 8px; /* 텍스트와 간격 */
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+/* 체크박스가 선택되었을 때 스타일 */
+.checkboxInput:checked + .checkboxLabel .customCheckbox {
+  background-color: #007bff; /* 선택 시 배경색 */
+  border-color: #007bff;
+}
+
+.checkboxInput:checked + .checkboxLabel .customCheckbox::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
